@@ -1,7 +1,8 @@
 const numberToGuess = Math.round(Math.random() * (10 - 1) + 1);
-numberOfAttempts = 5;
-correctInput = false;
-playerGuess = false;
+let numberOfAttempts = 5;
+let correctInput = false;
+let playerGuess = false;
+let inputNumber = 0;
 
 while (correctInput != true) {
 
