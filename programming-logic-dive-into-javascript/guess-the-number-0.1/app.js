@@ -1,12 +1,22 @@
-let title = document.querySelector('h1');
-title.innerHTML = 'Guess the number!';
+let secretNumber = generateSecretNumber();
 
-let paragraph = document.querySelector('.paragraph');
-paragraph.innerHTML = 'Enter a number between 1-10';
-
-function play() {
-    alert('Click from button');
+function verifyAttempt() {
+    let userAttempt = parseInt(document.querySelector('.container_input').value);
+    return;
 }
+
+function assignTextToElement(element, text) {
+    let elementHTML = document.querySelector(element);
+    elementHTML.innerHTML = text;
+}
+
+assignTextToElement('h1', 'Guess the number');
+assignTextToElement('.paragraph', 'Enter a number between 1-10');
+
+function generateSecretNumber() {
+   return Math.round(Math.random() * (10) + 1);
+}
+
 
 
 // let startButton = document.querySelector('.container_button');
@@ -17,12 +27,6 @@ function play() {
 
 
 
-
-
-
-
-
-// const numberToGuess = Math.round(Math.random() * (10 - 1) + 1);
 // let numberOfAttempts = 5;
 // let correctInput = false;
 // let playerGuess = false;
