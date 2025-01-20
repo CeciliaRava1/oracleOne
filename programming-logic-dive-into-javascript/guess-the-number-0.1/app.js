@@ -1,5 +1,6 @@
 let secretNumber;
 let numberOfAttempts;
+let secretNumbers = [];
 
 newGame();
 
@@ -9,7 +10,18 @@ function assignTextToElement(element, text) {
 }
 
 function generateSecretNumber() {
-    secretNumber = Math.round(Math.random() * 10 + 1);
+    notRepeated = false;
+    while (notRepeated == false && secretNumbers.length < 10) {
+        secretNumber = Math.round(Math.random() * 10);
+        console.log(secretNumber);
+        if (secretNumbers.includes(secretNumber)) {
+            console.log('repeated number');
+        } else {
+            notRepeated = true;
+            secretNumbers.push(secretNumber);
+        }
+    }
+    console.log(secretNumbers);
 }
 
 function cleanInput() {
