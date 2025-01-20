@@ -1,23 +1,28 @@
-let secretNumber = generateSecretNumber();
-let numberOfAttempts = 5;
+let secretNumber;
+let numberOfAttempts;
+
+newGame();
 
 function assignTextToElement(element, text) {
     let elementHTML = document.querySelector(element);
     elementHTML.innerHTML = text;
 }
 
-assignTextToElement('h1', 'Guess the number');
-assignTextToElement('.paragraph', 'Enter a number between 1-10');
-
 function generateSecretNumber() {
-    return Math.round(Math.random() * 10 + 1);
+    secretNumber = Math.round(Math.random() * 10 + 1);
 }
 
 function cleanInput() {
     document.querySelector('.container_input').value = '';
 }
 
-cleanInput();
+function newGame() {
+    cleanInput();
+    generateSecretNumber();
+    assignTextToElement('h1', 'Guess the number');
+    assignTextToElement('.paragraph', 'Enter a number between 1-10');
+    numberOfAttempts = 5;
+}
 
 function verifyAttempt() {
     let playerGuess = false;
