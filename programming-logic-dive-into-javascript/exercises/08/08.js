@@ -1,8 +1,9 @@
-listOfNumbers = [2, 5, 10, 24];
+let listOfNumbers = [2, 5, 10, 24];
+let listOfNumbersTwo = [1, 2, 3, 4];
+let newListSum = [];
 let averageValue = 0;
-largestNumber = listOfNumbers[0];
-smallestNumber = listOfNumbers[0];
-
+let largestNumber = listOfNumbers[0];
+let smallestNumber = listOfNumbers[0];
 
 // 1. Create an empty list called "genericList".
 let genericList = [];
@@ -58,13 +59,21 @@ function smallestLargest() {
 
 // 8. Create a function that returns the position in the list where an element passed as a parameter 
 // is located, or -1 if it does not exist in the list.
+let parameter = 5;
+function positionList(parameter) {
 
-function hola() {
-    
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        if (parameter == listOfNumbers[i]) {
+            console.log(`The position of ${parameter} is ${i}`);
+        }
+    }
 }
 
 // 9. Create a function that receives two lists of numbers of the same size and returns a new list 
 // with the sum of the elements one by one.
-
-// 10. Create a function that receives a list of numbers and returns a new list with the square of 
-// each number.
+function sumNewList(listOfNumbers, listOfNumbersTwo) {
+    for (let i = 0; i < listOfNumbers.length; i++) {
+        newListSum[i] = listOfNumbers[i] + listOfNumbersTwo[i];
+    }
+    console.log(newListSum);
+}
