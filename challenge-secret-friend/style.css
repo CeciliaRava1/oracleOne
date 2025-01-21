@@ -20,8 +20,14 @@ body:not(.footer) {
     font-size: 30px;
 }
 
-.paragraph {
+.paragraph, p {
     font-size: 20px;
+}
+
+.paragraphSorted {
+    font-size: 40px;
+    color: rgb(23, 95, 19);
+    font-weight: bold;
 }
 
 #inputName {
@@ -31,11 +37,6 @@ body:not(.footer) {
     margin-top: 18px;
     margin-bottom: 30px;
     padding: 10px;
-}
-
-.friendsList {
-    margin-bottom: 130px;
-    font-size: 24px;
 }
 
 .button {
@@ -53,6 +54,10 @@ body:not(.footer) {
     border: 1px solid #888888;
 }
 
+#button_sort {
+    background-color: rgb(249, 134, 63);
+}
+
 .footer {
     background-color: rgb(240, 178, 144);
     color: rgb(95, 94, 97);
@@ -62,6 +67,8 @@ body:not(.footer) {
     padding: 10px;
     text-align: center;
     font-size: 20px;
+
+    position: fixed;
 }
 
 .footer a {
